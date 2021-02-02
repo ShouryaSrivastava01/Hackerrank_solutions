@@ -8,27 +8,28 @@ int main()
     for(int i=0;i<m;i++){
     scanf("%d",&c[i]);
     }
-    if(n==m)
-    printf("0");
+
+    if(n==m) {// if every city as a space station
+        printf("0");
+    }
     else
     {
     for(int i=0;i<n;i++)
     {
-        min=n;
+        min=n;     //initialize min as number of cities to find nearest space station
         for(int j=0;j<m;j++)
         {
             if(abs(i-c[j])<min){
             min=abs(i-c[j]);
             }
         }
-        printf("%d ", min);
+        // max distance among all the cities
         if(min>=max){
             max=min;
         }
         
        
     }
-    printf("\n%d ", max);
-    //printf("%d",max);
-    }//min stores the nearest space station of a city and max stores the maximum distance to the nearest space station
+    printf("%d ", max);
+    }
 }
