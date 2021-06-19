@@ -2,7 +2,7 @@
 int main(){
     int n=0, k=0, q=0, t,i;  //n=terms, k=rotations, q= queries
     scanf("%d %d %d", &n, &k, &q);
-    int a[n], rev[n], p=(n+k)%n;
+    int a[n], rev[n], p=(k)%n;
     
     //taking input for array
     
